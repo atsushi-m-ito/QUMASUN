@@ -1,0 +1,52 @@
+
+# for NEC SX-AURORA (with MPI)
+
+#CXX = mpinc++ -O4 -DUSE_MPI -DUSE_SCALAPACK -std=c++17 -D_NEC -DASLFFTW_COMPLEX_LEGACY -DLAPACK_NO_HEADER -finline-functions -report-all
+CXX = mpinc++ -O2 -DUSE_MPI -DUSE_SCALAPACK -std=c++17 -D_NEC -DSELF_TRANSPOSE -DASLFFTW_COMPLEX_LEGACY -DLAPACK_NO_HEADER -finline-functions -report-all -g -minit-stack=runtime
+FC = mpinfort -O2 -D_NEC -DASLFFTW_COMPLEX_LEGACY -report-all -g -minit-stack=runtime
+LIB= 
+#LIB=  -laslfftw3_mpi -lasl_mpi_openmp -lscalapack -llapack -lblas_openmp #-ftrace
+
+#CXX = mpinc++ -DUSE_MPI -std=c++17 -O3
+#CXX = icpx -D_USE_MPI -std=c++17 -restrict -O3 -ip -qmkl -xCORE-AVX512 -qopt-zmm-usage=high -w2 -wd3180 -wd161 -qopt-report=max -qopt-report-file=opt-report.txt 
+#CXX = icpc -D_USE_MPI -std=c++17 -restrict -O3 -ip -qmkl -no-prec-div -xCORE-AVX512 -qopt-report=5 -qopt-zmm-usage=high -w2 -wd3180 -wd161 -static-libstdc++ -qopt-report-file=opt-report.txt
+
+DEST          = ../
+#CXXFLAGS = -I$(MKLROOT)/include/fftw
+#CXXFLAGS = -I/opt/nec/ve/nlc/3.0.0/include
+CXXFLAGS =
+LDFLAGS       = -lscalapack -llapack -lcblas -lblas_sequential -laslfftw3_mpi -lasl_mpi_sequential -lnc++ -lvec++
+LDFLAGSMPI    = 
+
+PROGRAM = qumasun.exe
+SRC = main_mpi.cpp $(wildcard qumasun_*.cpp)
+#PROGRAM = test.exe
+#SRC = test_mpi_difference.cpp
+#SRC = test_wave_bundle.cpp
+#SRCMPI = main_mpi.cpp
+OBJS = $(SRC:.cpp=.o)
+HEADERS=$(wildcard *.h)
+
+export CXX
+
+
+
+all:	$(PROGRAM)
+
+$(PROGRAM):	$(OBJS) $(HEADERS)
+		$(FC) $(CXXFLAGS) $(OBJS) $(LDFLAGS) $(LIBS) -o $(PROGRAM)
+
+
+
+.SUFFIXES:	.cpp .o
+
+.cpp.o:
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+clean:
+		rm -f *.o $(PROGRAM)
+
+install:	$(PROGRAM)
+		cp -p $(PROGRAM) $(DEST)
+
+

@@ -1,0 +1,118 @@
+
+
+
+SCF.Step       300
+SCF.EigenSolver.Step    2
+SCF.EigenSolver.InitialStep    100
+Initial.Density        atom
+#Initial.Density        input/diamond8continue/test.cube
+
+System.SpinPolarization.Mode        1
+
+
+System.AtomicElement.Begin
+  C       PP/C_CA19.vps     PP/C7.0.pao
+System.AtomicElement.End
+
+
+Material.SuperCell     1 1 1
+Material.UnitLatticeVector.Unit    Ang
+Material.UnitLatticeVector.Begin
+  3.57 0.0 0.0          # Angstrome
+  0.0 3.57 0.0
+  0.0 0.0 3.57
+Material.UnitLatticeVector.End
+
+Material.UnitCell.Unit    FRAC
+Material.UnitCell.Begin
+  C  0.00  0.00  0.00
+  C  0.25  0.25  0.25
+  C  0.50  0.50  0.00
+  C  0.75  0.75  0.25
+  C  0.50  0.00  0.50
+  C  0.75  0.25  0.75
+  C  0.00  0.50  0.50
+  C  0.25  0.75  0.75
+Material.UnitCell.End
+
+
+System.SpaceGrid     24 24 24
+System.HighResolution.Ratio  2
+System.Hamiltonian      KohnSham_PP
+System.KpointSample  1 1 1
+
+SCF.Temperature   300.0
+SCF.MixingRatio   0.1
+
+System.NumElectrons    32
+System.NumSolusions      20
+
+//Output.StateVector     state
+/*
+Initial.State.Begin
+input/diamond8continue/state_k0_n0_re.cube
+input/diamond8continue/state_k0_n0_im.cube
+input/diamond8continue/state_k0_n1_re.cube
+input/diamond8continue/state_k0_n1_im.cube
+input/diamond8continue/state_k0_n2_re.cube
+input/diamond8continue/state_k0_n2_im.cube
+input/diamond8continue/state_k0_n3_re.cube
+input/diamond8continue/state_k0_n3_im.cube
+input/diamond8continue/state_k0_n4_re.cube
+input/diamond8continue/state_k0_n4_im.cube
+input/diamond8continue/state_k0_n5_re.cube
+input/diamond8continue/state_k0_n5_im.cube
+input/diamond8continue/state_k0_n6_re.cube
+input/diamond8continue/state_k0_n6_im.cube
+input/diamond8continue/state_k0_n7_re.cube
+input/diamond8continue/state_k0_n7_im.cube
+input/diamond8continue/state_k0_n8_re.cube
+input/diamond8continue/state_k0_n8_im.cube
+input/diamond8continue/state_k0_n9_re.cube
+input/diamond8continue/state_k0_n9_im.cube
+input/diamond8continue/state_k0_n10_re.cube
+input/diamond8continue/state_k0_n10_im.cube
+input/diamond8continue/state_k0_n11_re.cube
+input/diamond8continue/state_k0_n11_im.cube
+input/diamond8continue/state_k0_n12_re.cube
+input/diamond8continue/state_k0_n12_im.cube
+input/diamond8continue/state_k0_n13_re.cube
+input/diamond8continue/state_k0_n13_im.cube
+input/diamond8continue/state_k0_n14_re.cube
+input/diamond8continue/state_k0_n14_im.cube
+input/diamond8continue/state_k0_n15_re.cube
+input/diamond8continue/state_k0_n15_im.cube
+input/diamond8continue/state_k0_n0_re.cube
+input/diamond8continue/state_k0_n0_im.cube
+input/diamond8continue/state_k0_n1_re.cube
+input/diamond8continue/state_k0_n1_im.cube
+input/diamond8continue/state_k0_n2_re.cube
+input/diamond8continue/state_k0_n2_im.cube
+input/diamond8continue/state_k0_n3_re.cube
+input/diamond8continue/state_k0_n3_im.cube
+input/diamond8continue/state_k0_n4_re.cube
+input/diamond8continue/state_k0_n4_im.cube
+input/diamond8continue/state_k0_n5_re.cube
+input/diamond8continue/state_k0_n5_im.cube
+input/diamond8continue/state_k0_n6_re.cube
+input/diamond8continue/state_k0_n6_im.cube
+input/diamond8continue/state_k0_n7_re.cube
+input/diamond8continue/state_k0_n7_im.cube
+input/diamond8continue/state_k0_n8_re.cube
+input/diamond8continue/state_k0_n8_im.cube
+input/diamond8continue/state_k0_n9_re.cube
+input/diamond8continue/state_k0_n9_im.cube
+input/diamond8continue/state_k0_n10_re.cube
+input/diamond8continue/state_k0_n10_im.cube
+input/diamond8continue/state_k0_n11_re.cube
+input/diamond8continue/state_k0_n11_im.cube
+input/diamond8continue/state_k0_n12_re.cube
+input/diamond8continue/state_k0_n12_im.cube
+input/diamond8continue/state_k0_n13_re.cube
+input/diamond8continue/state_k0_n13_im.cube
+input/diamond8continue/state_k0_n14_re.cube
+input/diamond8continue/state_k0_n14_im.cube
+input/diamond8continue/state_k0_n15_re.cube
+input/diamond8continue/state_k0_n15_im.cube
+Initial.State.End
+*/

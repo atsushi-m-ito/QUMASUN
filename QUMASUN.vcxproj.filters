@@ -1,0 +1,620 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="input">
+      <UniqueIdentifier>{269792b8-de0d-43a2-af16-e72ec869484d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="source\PseudoPotMBK">
+      <UniqueIdentifier>{a8f660eb-4eca-4f49-b684-e3d4c6459d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\tools">
+      <UniqueIdentifier>{8bb3884e-e701-4c7b-9e57-adf8bb2f8905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\grid">
+      <UniqueIdentifier>{9b52aadf-ce4a-4a56-a8ea-ecc1d97cb93a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\test">
+      <UniqueIdentifier>{80964caa-4ad2-4da3-baf9-16c947464618}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\qumasun_mpi">
+      <UniqueIdentifier>{677f6fa8-fa5c-4674-bbc5-c9a5dd8e8971}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\qumasun_single">
+      <UniqueIdentifier>{a07b1172-d534-4a3f-a47e-8fb28e60055a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\qumasun_kpoint">
+      <UniqueIdentifier>{4a0e18a3-b20c-49ae-b081-666f934a0559}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\eigensolver">
+      <UniqueIdentifier>{0bc2f4fb-5c7c-45c4-83d6-fc7892a65ae9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\dynamics">
+      <UniqueIdentifier>{6e2567f1-7566-4093-84b3-e320bdff4b0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\qumasun_td">
+      <UniqueIdentifier>{ce4e6ef1-5447-42a3-8991-3b5840bcc639}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="source\input">
+      <UniqueIdentifier>{f21dbf98-a1ff-4555-a732-938d03faeea9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\main_mpi.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_difference.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_interpolation.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_wave_bundle.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_mpi_scatter_gather.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_mpi_difference.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_DGEMM.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_scalapack.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+    <ClCompile Include="source\test_mpi_comm4atom.cpp">
+      <Filter>source\test</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\wave_function.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\wrap_fft.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\wrap_lapack.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Vxc.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\nucleus.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\vecmath.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\RadialGrid2.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\RealSphericalHarmonics.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\SubspaceField.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Trigonometric.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Legendre.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\PseudoPotOperator.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\vps_loader.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\pao_loader.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GramSchmidt.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\atomic_number.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\wrap_chrono.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\field_interpolation.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\cube_reader2.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\JobParam.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\msz.complex.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridFor.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridRange.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\mpi_helper.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifference2nd.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifference4th.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridProduct.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridScatterGather.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GetArg.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridSubgrid.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.scatter.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\vps_mpi_broadcast.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridSubgrid_arithmetic.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GramSchmidt_mpi.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\StopWatch.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\physical_param.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\print_matrix.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_note.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.scatter.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\inverse_m.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lanczos_d.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lanczos_z.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lobpcg_d.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lobpcg_d_multi.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lobpcg_d_multi_mpi.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_dstevd.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_dsygvx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_zheevx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_zhegvx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\lobpcg_z_multi_mpi.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\soacomplex.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifference6th.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifferenceKpoint6th.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.output.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\cube_writer.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.output.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.output.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifferenceKpoint2nd.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifference8th.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridDifferenceKpoint8th.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\actual_kpoint.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridVoxelSphere.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\SetBlockYlm.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_dgemm.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_dsyevx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_pdsyevd.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\wrap_scalapack.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_pdsyevx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_pdsygvx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.core.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.density.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.energy.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.initialize.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.lanczos.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.lobpcg.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.matrix.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.occupancy.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.potential.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.scfloop.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.constructor.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.core.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.density.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.energy.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.initialize.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.lobpcg.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.matrix.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.occupancy.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.potential.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.scfloop.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\SetOccupancy.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.constructor.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.core.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.density.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.energy.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.initialize.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.lanczos.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.lobpcg.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.matrix.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.occupancy.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.potential.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_single.scfloop.h">
+      <Filter>source\qumasun_single</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.constructor.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\w_pzhegvx.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\debug_print.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\comm4atom.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\PseudoPotOperator_mpi_v2.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\PseudoPotOperator_kpoint_v2.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\symmetrize_density.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\initial_Arnoldi_d.h">
+      <Filter>source\eigensolver</Filter>
+    </ClInclude>
+    <ClInclude Include="source\poisson_fft.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GridGradient8th.h">
+      <Filter>source\grid</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.force.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\vec3.h">
+      <Filter>source\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.force.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dynamics.h">
+      <Filter>source\dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.move.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.print.h">
+      <Filter>source\qumasun_kpoint</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.print.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.move.h">
+      <Filter>source\qumasun_mpi</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Relaxation2.h">
+      <Filter>source\dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.constructor.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.core.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.density.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.energy.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.force.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.initialize.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.time_evo_H4.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.matrix.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.move.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.occupancy.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.output.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.potential.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.print.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.scatter.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_td.evolution.h">
+      <Filter>source\qumasun_td</Filter>
+    </ClInclude>
+    <ClInclude Include="source\dynamics_td.h">
+      <Filter>source\dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="source\ellipsoidal_integral.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GaussLegendre.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\GaussLaguerre.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\PseudoPotOperator_vlocal.h">
+      <Filter>source\PseudoPotMBK</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_input.h">
+      <Filter>source\input</Filter>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_make_input.h">
+      <Filter>source\input</Filter>
+    </ClInclude>
+    <ClInclude Include="source\convertHR.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\folding.h">
+      <Filter>source\dynamics</Filter>
+    </ClInclude>
+    <ClInclude Include="source\transpose.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\fftw_executor.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\md3_writer2.h">
+      <Filter>source</Filter>
+    </ClInclude>
+    <ClInclude Include="source\velocity_for_wave.h">
+      <Filter>source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input\H1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\N2.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond8.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\C2.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\CH4.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\C1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\N1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\H2.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\Ne1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\Ar1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\Li1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond64.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond8x2.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond8k211.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\W16k222.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\Wbcc2kBBB.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\W110suf.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond8relax.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond8tddft.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\graphene.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\Wbcc2_expand.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\diamond8tddft_continue.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\He1.txt">
+      <Filter>input</Filter>
+    </Text>
+    <Text Include="input\H1_tddft.txt">
+      <Filter>input</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitignore" />
+    <None Include="source\makefile">
+      <Filter>source</Filter>
+    </None>
+    <None Include="source\makefile.nec">
+      <Filter>source</Filter>
+    </None>
+    <None Include=".gitattributes" />
+    <None Include=".editorconfig" />
+  </ItemGroup>
+</Project>

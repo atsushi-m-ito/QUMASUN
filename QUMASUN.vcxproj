@@ -1,0 +1,546 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.props" Condition="Exists('packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MPI-Debug|Win32">
+      <Configuration>MPI-Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MPI-Debug|x64">
+      <Configuration>MPI-Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MPI-Release|Win32">
+      <Configuration>MPI-Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="MPI-Release|x64">
+      <Configuration>MPI-Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{E7A18774-EA60-461E-BB1F-BD929B600A6D}</ProjectGuid>
+    <RootNamespace>QUMASUN</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseIntelMKL>Sequential</UseIntelMKL>
+    <UseMpiLibrary>MSMPI</UseMpiLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseIntelMKL>Sequential</UseIntelMKL>
+    <UseMpiLibrary>MSMPI</UseMpiLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseIntelMKL>Sequential</UseIntelMKL>
+    <UseMpiLibrary>MSMPI</UseMpiLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseIntelMKL>Sequential</UseIntelMKL>
+    <UseMpiLibrary>MSMPI</UseMpiLibrary>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>fftw-3.3.10\api;..\OpenBLAS-0.3.23-x64\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>fftw-3.3.10\fftw-3.3-libs\x64\Static-Release;..\OpenBLAS-0.3.23-x64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <ExecutablePath>fftw-3.3.10;..\OpenBLAS-0.3.23-x64\bin;$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">
+    <IncludePath>$(MSMPI_INC);fftw-3.3.10\api;..\OpenBLAS-0.3.23-x64\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(MSMPI_LIB64);fftw-3.3.10\fftw-3.3-libs\x64\Static-Release;..\OpenBLAS-0.3.23-x64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <ExecutablePath>$(MSMPI_BIN);fftw-3.3.10;..\OpenBLAS-0.3.23-x64\bin;$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>fftw-3.3.10\api;..\OpenBLAS-0.3.23-x64\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>fftw-3.3.10\fftw-3.3-libs\x64\Static-Debug;..\OpenBLAS-0.3.23-x64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <ExecutablePath>fftw-3.3.10;..\OpenBLAS-0.3.23-x64\bin;$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">
+    <IncludePath>$(MSMPI_INC);fftw-3.3.10\api;..\OpenBLAS-0.3.23-x64\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(MSMPI_LIB64);fftw-3.3.10\fftw-3.3-libs\x64\Static-Debug;..\OpenBLAS-0.3.23-x64\lib;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+    <ExecutablePath>$(MSMPI_BIN);fftw-3.3.10;..\OpenBLAS-0.3.23-x64\bin;$(VC_ExecutablePath_x64);$(CommonExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>libopenblas.lib;libfftw-3.3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>USE_MPI;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <EnableEnhancedInstructionSet>NotSet</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <AdditionalDependencies>msmpi.lib;libopenblas.lib;libfftw-3.3-mpi.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>libopenblas.lib;libfftw-3.3.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
+      <EnableParallelCodeGeneration>false</EnableParallelCodeGeneration>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG_PRINT_ON;USE_MPI;_USE_MATH_DEFINES;_CRT_SECURE_NO_WARNINGS;_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>
+      </AdditionalLibraryDirectories>
+      <AdditionalDependencies>msmpi.lib;libopenblas.lib;libfftw-3.3-mpi.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="source\main_mpi.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\main.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_difference.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_DGEMM.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_interpolation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_mpi_comm4atom.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_mpi_difference.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_mpi_scatter_gather.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_scalapack.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="source\test_wave_bundle.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\actual_kpoint.h" />
+    <ClInclude Include="source\atomic_number.h" />
+    <ClInclude Include="source\comm4atom.h" />
+    <ClInclude Include="source\convertHR.h" />
+    <ClInclude Include="source\cube_reader2.h" />
+    <ClInclude Include="source\cube_writer.h" />
+    <ClInclude Include="source\debug_print.h" />
+    <ClInclude Include="source\dynamics.h" />
+    <ClInclude Include="source\dynamics_td.h" />
+    <ClInclude Include="source\ellipsoidal_integral.h" />
+    <ClInclude Include="source\fftw_executor.h" />
+    <ClInclude Include="source\field_interpolation.h" />
+    <ClInclude Include="source\folding.h" />
+    <ClInclude Include="source\GaussLaguerre.h" />
+    <ClInclude Include="source\GaussLegendre.h" />
+    <ClInclude Include="source\GetArg.h" />
+    <ClInclude Include="source\GramSchmidt.h" />
+    <ClInclude Include="source\GramSchmidt_mpi.h" />
+    <ClInclude Include="source\GridDifference2nd.h" />
+    <ClInclude Include="source\GridDifference4th.h" />
+    <ClInclude Include="source\GridDifference6th.h" />
+    <ClInclude Include="source\GridDifference8th.h" />
+    <ClInclude Include="source\GridDifferenceKpoint2nd.h" />
+    <ClInclude Include="source\GridDifferenceKpoint6th.h" />
+    <ClInclude Include="source\GridDifferenceKpoint8th.h" />
+    <ClInclude Include="source\GridFor.h" />
+    <ClInclude Include="source\GridGradient8th.h" />
+    <ClInclude Include="source\GridProduct.h" />
+    <ClInclude Include="source\GridRange.h" />
+    <ClInclude Include="source\GridScatterGather.h" />
+    <ClInclude Include="source\GridSubgrid.h" />
+    <ClInclude Include="source\GridSubgrid_arithmetic.h" />
+    <ClInclude Include="source\GridVoxelSphere.h" />
+    <ClInclude Include="source\initial_Arnoldi_d.h" />
+    <ClInclude Include="source\inverse_m.h" />
+    <ClInclude Include="source\JobParam.h" />
+    <ClInclude Include="source\lanczos_d.h" />
+    <ClInclude Include="source\lanczos_z.h" />
+    <ClInclude Include="source\Legendre.h" />
+    <ClInclude Include="source\lobpcg_d.h" />
+    <ClInclude Include="source\lobpcg_d_multi.h" />
+    <ClInclude Include="source\lobpcg_d_multi_mpi.h" />
+    <ClInclude Include="source\lobpcg_z_multi_mpi.h" />
+    <ClInclude Include="source\md3_writer2.h" />
+    <ClInclude Include="source\mpi_helper.h" />
+    <ClInclude Include="source\msz.complex.h" />
+    <ClInclude Include="source\nucleus.h" />
+    <ClInclude Include="source\pao_loader.h" />
+    <ClInclude Include="source\physical_param.h" />
+    <ClInclude Include="source\poisson_fft.h" />
+    <ClInclude Include="source\print_matrix.h" />
+    <ClInclude Include="source\PseudoPotOperator.h" />
+    <ClInclude Include="source\PseudoPotOperator_kpoint_v2.h" />
+    <ClInclude Include="source\PseudoPotOperator_mpi_v2.h" />
+    <ClInclude Include="source\PseudoPotOperator_vlocal.h" />
+    <ClInclude Include="source\qumasun_input.h" />
+    <ClInclude Include="source\qumasun_kpoint.constructor.h" />
+    <ClInclude Include="source\qumasun_kpoint.core.h" />
+    <ClInclude Include="source\qumasun_kpoint.density.h" />
+    <ClInclude Include="source\qumasun_kpoint.energy.h" />
+    <ClInclude Include="source\qumasun_kpoint.force.h" />
+    <ClInclude Include="source\qumasun_kpoint.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.initialize.h" />
+    <ClInclude Include="source\qumasun_kpoint.lobpcg.h" />
+    <ClInclude Include="source\qumasun_kpoint.matrix.h" />
+    <ClInclude Include="source\qumasun_kpoint.move.h" />
+    <ClInclude Include="source\qumasun_kpoint.occupancy.h" />
+    <ClInclude Include="source\qumasun_kpoint.output.h" />
+    <ClInclude Include="source\qumasun_kpoint.potential.h" />
+    <ClInclude Include="source\qumasun_kpoint.print.h" />
+    <ClInclude Include="source\qumasun_kpoint.scatter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='MPI-Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_kpoint.scfloop.h" />
+    <ClInclude Include="source\qumasun_make_input.h" />
+    <ClInclude Include="source\qumasun_mpi.constructor.h" />
+    <ClInclude Include="source\qumasun_mpi.core.h" />
+    <ClInclude Include="source\qumasun_mpi.density.h" />
+    <ClInclude Include="source\qumasun_mpi.energy.h" />
+    <ClInclude Include="source\qumasun_mpi.force.h" />
+    <ClInclude Include="source\qumasun_mpi.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.initialize.h" />
+    <ClInclude Include="source\qumasun_mpi.lanczos.h" />
+    <ClInclude Include="source\qumasun_mpi.lobpcg.h" />
+    <ClInclude Include="source\qumasun_mpi.matrix.h" />
+    <ClInclude Include="source\qumasun_mpi.move.h" />
+    <ClInclude Include="source\qumasun_mpi.occupancy.h" />
+    <ClInclude Include="source\qumasun_mpi.output.h" />
+    <ClInclude Include="source\qumasun_mpi.potential.h" />
+    <ClInclude Include="source\qumasun_mpi.print.h" />
+    <ClInclude Include="source\qumasun_mpi.scatter.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="source\qumasun_mpi.scfloop.h" />
+    <ClInclude Include="source\qumasun_note.h" />
+    <ClInclude Include="source\qumasun_single.constructor.h" />
+    <ClInclude Include="source\qumasun_single.core.h" />
+    <ClInclude Include="source\qumasun_single.density.h" />
+    <ClInclude Include="source\qumasun_single.energy.h" />
+    <ClInclude Include="source\qumasun_single.h" />
+    <ClInclude Include="source\qumasun_single.initialize.h" />
+    <ClInclude Include="source\qumasun_single.lanczos.h" />
+    <ClInclude Include="source\qumasun_single.lobpcg.h" />
+    <ClInclude Include="source\qumasun_single.matrix.h" />
+    <ClInclude Include="source\qumasun_single.occupancy.h" />
+    <ClInclude Include="source\qumasun_single.output.h" />
+    <ClInclude Include="source\qumasun_single.potential.h" />
+    <ClInclude Include="source\qumasun_single.scfloop.h" />
+    <ClInclude Include="source\qumasun_td.constructor.h" />
+    <ClInclude Include="source\qumasun_td.core.h" />
+    <ClInclude Include="source\qumasun_td.density.h" />
+    <ClInclude Include="source\qumasun_td.energy.h" />
+    <ClInclude Include="source\qumasun_td.force.h" />
+    <ClInclude Include="source\qumasun_td.h" />
+    <ClInclude Include="source\qumasun_td.initialize.h" />
+    <ClInclude Include="source\qumasun_td.time_evo_H4.h" />
+    <ClInclude Include="source\qumasun_td.matrix.h" />
+    <ClInclude Include="source\qumasun_td.move.h" />
+    <ClInclude Include="source\qumasun_td.occupancy.h" />
+    <ClInclude Include="source\qumasun_td.output.h" />
+    <ClInclude Include="source\qumasun_td.potential.h" />
+    <ClInclude Include="source\qumasun_td.print.h" />
+    <ClInclude Include="source\qumasun_td.scatter.h" />
+    <ClInclude Include="source\qumasun_td.evolution.h" />
+    <ClInclude Include="source\RadialGrid2.h" />
+    <ClInclude Include="source\RealSphericalHarmonics.h" />
+    <ClInclude Include="source\Relaxation2.h" />
+    <ClInclude Include="source\SetBlockYlm.h" />
+    <ClInclude Include="source\SetOccupancy.h" />
+    <ClInclude Include="source\soacomplex.h" />
+    <ClInclude Include="source\StopWatch.h" />
+    <ClInclude Include="source\SubspaceField.h" />
+    <ClInclude Include="source\symmetrize_density.h" />
+    <ClInclude Include="source\transpose.h" />
+    <ClInclude Include="source\Trigonometric.h" />
+    <ClInclude Include="source\vec3.h" />
+    <ClInclude Include="source\vecmath.h" />
+    <ClInclude Include="source\velocity_for_wave.h" />
+    <ClInclude Include="source\vps_loader.h" />
+    <ClInclude Include="source\vps_mpi_broadcast.h" />
+    <ClInclude Include="source\Vxc.h" />
+    <ClInclude Include="source\wave_function.h" />
+    <ClInclude Include="source\wrap_chrono.h" />
+    <ClInclude Include="source\wrap_fft.h" />
+    <ClInclude Include="source\wrap_lapack.h" />
+    <ClInclude Include="source\wrap_scalapack.h" />
+    <ClInclude Include="source\w_dgemm.h" />
+    <ClInclude Include="source\w_dstevd.h" />
+    <ClInclude Include="source\w_dsyevx.h" />
+    <ClInclude Include="source\w_dsygvx.h" />
+    <ClInclude Include="source\w_pdsyevd.h" />
+    <ClInclude Include="source\w_pdsyevx.h" />
+    <ClInclude Include="source\w_pdsygvx.h" />
+    <ClInclude Include="source\w_pzhegvx.h" />
+    <ClInclude Include="source\w_zheevx.h" />
+    <ClInclude Include="source\w_zhegvx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="input\Ar1.txt" />
+    <Text Include="input\C1.txt" />
+    <Text Include="input\C2.txt" />
+    <Text Include="input\CH4.txt" />
+    <Text Include="input\diamond64.txt" />
+    <Text Include="input\diamond8.txt" />
+    <Text Include="input\diamond8tddft.txt" />
+    <Text Include="input\diamond8k211.txt" />
+    <Text Include="input\diamond8relax.txt" />
+    <Text Include="input\diamond8tddft_continue.txt" />
+    <Text Include="input\diamond8x2.txt" />
+    <Text Include="input\graphene.txt" />
+    <Text Include="input\H1.txt" />
+    <Text Include="input\H1_tddft.txt" />
+    <Text Include="input\H2.txt" />
+    <Text Include="input\He1.txt" />
+    <Text Include="input\Li1.txt" />
+    <Text Include="input\N1.txt" />
+    <Text Include="input\N2.txt" />
+    <Text Include="input\Ne1.txt" />
+    <Text Include="input\W110suf.txt" />
+    <Text Include="input\W16k222.txt" />
+    <Text Include="input\Wbcc2kBBB.txt" />
+    <Text Include="input\Wbcc2_expand.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".editorconfig" />
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="source\makefile" />
+    <None Include="source\makefile.nec" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.targets" Condition="Exists('packages\Microsoft.Windows.CppWinRT.2.0.210806.1\build\native\Microsoft.Windows.CppWinRT.targets')" />
+  </ImportGroup>
+</Project>
